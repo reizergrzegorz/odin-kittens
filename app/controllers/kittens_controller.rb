@@ -3,9 +3,18 @@ class KittensController < ApplicationController
   
     def index
       @kittens = Kitten.all
+
+      respond_to do |format|
+        format.html # default for the browser's HTML response
+        format.json { render json: @kittens } # JSON response
+      end  
     end
   
     def show
+      respond_to do |format|
+        format.html # default for the browser's HTML response
+        format.json { render json: @kitten } # JSON response for a single kitten
+      end  
     end
   
     def new
