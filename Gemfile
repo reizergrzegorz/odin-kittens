@@ -61,3 +61,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "rest-client", "~> 2.1"
+gem 'ffi', '~> 1.15'
