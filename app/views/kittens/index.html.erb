@@ -1,0 +1,13 @@
+<h1>Kittens</h1>
+<%= link_to 'New Kitten', new_kitten_path %>
+
+<ul>
+  <% @kittens.each do |kitten| %>
+    <li>
+      <%= kitten.name %> (<%= kitten.age %> years old)
+      <%= link_to 'Show', kitten %> |
+      <%= link_to 'Edit', edit_kitten_path(kitten) %> |
+      <%= link_to 'Delete', kitten, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
