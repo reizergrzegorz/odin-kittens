@@ -63,4 +63,4 @@ group :test do
 end
 
 gem "rest-client", "~> 2.1"
-gem 'ffi', '~> 1.15'
+gem 'ffi', '~> 1.17'
